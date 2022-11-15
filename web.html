@@ -1,0 +1,107 @@
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+
+  $(document).ready(function(){
+    $("#sendMessage").click(function(){
+      var arr = ["放手去做", "相信自己", "再等等", "時候未到", "努力爭取", "堅持", "適時斷捨離","夢想成真","見好就收","適可而止",
+    "再試試看","及時行樂","給自己一個機會","休息一下","看起來很有把握","就是現在","可能有意外","跟隨他人的步伐","有把握的事再做",
+    "等待更好的時機","列出否定的理由","它仍是不可預測的","懷疑","可能有反對意見","賭一把","試一次","保持原狀","改變現狀","放下",
+    "藏起來","它會引起轟動","你希望得到肯定的答案","需要付出加倍的努力","尊重他人的意見","遵守承諾","享受體驗","會成功的","對此深信不疑",
+    "未來也許","你不會忘記的","要有耐心","參考他人的意見","立即行動"]
+      var Index = Math.floor((Math.random()*arr.length));
+      var text = arr[Index];
+        var N = $("#sign").val();
+        $("#boo").text(text);
+    })
+   
+})
+  document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('sendMessage').onclick = function(){
+
+      const userName = document.getElementById('name').value;
+      const url = 'https://jsonplaceholder.typicode.com/posts';
+const xhr = new XMLHttpRequest();
+xhr.open('POST', url, true);
+xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 201){
+    const serverResponse = JSON.parse(xhr.response);
+    document.getElementsByClassName('message')[0].textContent = serverResponse.userName + serverResponse.suffix;
+  }
+};
+const body = JSON.stringify({ userName: userName, suffix: ', 你好!' });
+xhr.send(body);
+
+    };
+  });
+</script>
+<style>
+  body {
+    text-align: center;
+    font-family: "LiSu", FZShuTi;
+  }
+  h1 {
+    font-size: 8em;
+    font-weight: bolder;
+    margin: 20px;
+  }
+  .box {
+    width: 50%;
+    border-radius: 30px;
+    background-color: #f2c0ff;
+    margin:0px 30px 0px 20%; 
+    padding: 50px;
+    font-size:20px;
+  }
+  button {
+    width: 50%;
+    color: black;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    padding: 1px;
+  }
+  button:hover {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 1px;
+  }
+  h2{
+    text-align: center;
+    font-family: "FZShuTi", FZShuTi;
+    font-size: 5em;
+    font-weight: bolder;
+  }
+  h3{
+    text-align: center;
+    font-family: "FZYaoTi";
+    font-size: 1.5em;
+    font-weight: bolder;
+  }
+</style>
+
+<h1>智 慧 之 書</h1>
+<p class="message box">
+    當您有無法解決的問題時，智慧之書將為您提供答案</br>
+    請在心中默念您的問題，並點擊智慧之書
+</p>
+<p>
+  <button id="sendMessage">
+        <img src="https://raw.githubusercontent.com/anngood/anngood.github.io/gh-pages/%E7%BF%BB%E6%9B%B8.gif" style="width: 100%; height:100%;">
+  </button>
+  <h2 id = 'boo'></h2>
+</p>
+<p>
+    <h3>
+    <script language="JavaScript">
+        function ShowTime(){
+        　document.getElementById('showbox').innerHTML = new Date();
+        　setTimeout('ShowTime()',1000);
+        }
+        </script>
+        <body onload="ShowTime()">
+        <div id="showbox"></div>
+        </body>
+    </h3>
+</p>
