@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Hello </title>
+        <link rel="stylesheet" href="css/game.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/game.js"></script>
+    </head>
+    <body>
+        <div id="bodyBackground"></div>
+        <div id="other">
+            <h1 id="Score"></h1>
+            <img id="start" src="img/play2.png" >
+            <img id="again" title="Restart" src="img/again.png" >
+            <!-- <button id="start">Start</button> -->
+        </div>
+        <div id="MainBackground">
+            <img id="plane" src="img/plane.png">
+            <img class="rock r1" src='img/rock.png'>
+            <img class="rock r2" src='img/rock.png'>
+            <img class="rock r3" src='img/rock.png'>
+            <img class="rock r4" src='img/rock.png'>
+            <img class="rock r5" src='img/rock.png'>
+        </div>
+        <div id="intro">
+            <h1>Game Intro</h1>
+            <ul>
+                <li>左右鍵控制飛機移動</li>
+                <li>上鍵控制子彈發射</li>
+                <li>只要用子彈擊中隕石得5分</li>
+                <li>若沒有及時擊中隕石則扣5分</li>
+                <li>飛機被隕石擊中則遊戲結束, <br>請重新開始遊戲</li>
+                <li>左上角按鈕可以開始/暫停/重來</li>
+            </ul>
+            <button id="OK">OK</button>
+        </div>
+    </body>
+</html>
