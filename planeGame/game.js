@@ -6,6 +6,7 @@ var RockY = [-700, -100, -300, -500, -800];
 var BulletX = {};
 var BulletY = {};
 var PlaneX = 250;
+var PlaneW = 60;
 var Key = 0;
 var Retry = 1;
 var MainW = 800;
@@ -24,7 +25,7 @@ function SetGame(){
         RockW[i] = Math.floor(Math.random()*20+50);
     }
     for(var i = 0; i < 5; i++){
-        RockX[i] = Math.floor(Math.random()*(MainW-120)+60);
+        RockX[i] = Math.floor(Math.random()*(MainW-(PlaneW*2))+PlaneW);
     }
     RockY[0] = -700;
     RockY[1] = -100;
@@ -69,6 +70,7 @@ function setStar(){
 
 $(document).ready(function(){
     $("#start").hide();
+    $("#GameOver").hide();
     $("#start").css({'opacity':1})
     $("#again").hide();
     $("#again").css({'opacity':1})
@@ -142,6 +144,13 @@ $(document).ready(function(){
         SetGame();
     })
     // ShowScore();
+    $("#Yes").click(function(){
+        
+    })
+    $("#No").click(function(){
+        $("#GameOver").hide();
+        console.log(1);
+    })
     setInterval("MoveRock()",20);
     setInterval("MoveBullet()",1);
 });
@@ -268,9 +277,9 @@ function MoveRock(){
                 (RockX[i-1]+RockW[i-1] < tmpleft+70 && RockX[i-1]+RockW[i-1] > tmpleft+10) ||
                 (RockX[i-1] < tmpleft && tmpleft+70 < RockX[i-1]+RockW[i-1])){
                 // (RockX[i-1] > tmpleft && tmpleft+70 < RockX[i-1]+RockW[i-1])
-                if(RockY[i-1]+RockW[i-1] > tmpTop+10 && RockY[i-1]+RockW[i-1] < tmpTop+70 ){
-                    alert("Game Over");
-
+                if(RockY[i-1]+RockW[i-1] > tmpTop+10 && RockY[i-1]+RockW[i-1] < tmpTop+80 ){
+                    //alert("Game Over");
+                    $("#GameOver").show();
                     // SetRock(i+1);
                     Retry = 0;
                     ShowScore();
@@ -291,12 +300,12 @@ function checkRock(i){
 }
 function ShowScore(){
     if(Retry == 0){
-        $("#Score").html("Your Score : "+Score+" , Play Again?");
-        $("#Score").css({
-            'font-size':40+'px',
-            'top':33+"%",
-            'left':40+"%"
-        })
+        $("#Score").html("Your Score : "+Score);
+        // $("#Score").css({
+        //     'font-size':40+'px',
+        //     'top':33+"%",
+        //     'left':40+"%"
+        // })
     }
     else{
         $("#Score").text("Your Score : "+Score);

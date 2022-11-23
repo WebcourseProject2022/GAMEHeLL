@@ -105,6 +105,12 @@ body{
     left: 43%;
     top: 70%;
 }
+#GameOver{
+    width: auto;
+    position: absolute;
+    z-index: 7;
+}
+
 #start{
     width: 80px;
     height: 80px;
