@@ -5,6 +5,29 @@ body{
     width: 300px;
     height: 200px;
 }
+.all{
+    position: absolute;
+    top:20%;
+    left: 11%;
+}
 .card{
-    display: inline;
+    width: 400px;
+    height: 100px;
+    /* position: absolute; */
+    display: inline-table;
+}
+.c1{
+    
+}
+.c2{
+
+}
+.c3{
+
+}
+.c4{
+
+}
+.c5{
+
 }
