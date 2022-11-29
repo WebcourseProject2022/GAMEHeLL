@@ -4,6 +4,7 @@ body{
 .card-img-top{
     width: 300px;
     height: 200px;
+    border-radius: 15px;
 }
 .all{
     position: absolute;
@@ -30,4 +31,16 @@ body{
 }
 .c5{
 
+}
+h1{
+    text-align: center;
+    font-family: STHupo;
+    font-size: 60px;
+    font-weight: bolder;
+}
+h2{
+    text-align: center;
+    font-family: 微軟正黑體;
+    font-size: 40px;
+    font-weight: bolder;
 }
