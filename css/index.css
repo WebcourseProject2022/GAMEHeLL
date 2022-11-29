@@ -5,6 +5,7 @@ body{
     width: 300px;
     height: 200px;
     border-radius: 15px;
+    margin: 20px;
 }
 .all{
     position: absolute;
@@ -27,15 +28,15 @@ body{
 
 }
 .c4{
-
+    border-radius: 30px;
 }
 .c5{
 
 }
 h1{
     text-align: center;
-    font-family: Titillium Web;
-    font-size: 60px;
+    font-family: Rubik Glitch;
+    font-size: 70px;
     font-weight: bolder;
 }
 h2{
