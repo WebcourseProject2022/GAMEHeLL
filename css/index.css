@@ -1,9 +1,11 @@
-body{
+/* body{
     background-color: azure;
-}
+} */
 .card-img-top{
     width: 300px;
     height: 200px;
+    border-radius: 15px;
+    margin: 20px;
 }
 .all{
     position: absolute;
@@ -26,8 +28,22 @@ body{
 
 }
 .c4{
-
+    border-radius: 30px;
 }
 .c5{
 
+}
+h1{
+    text-align: center;
+    font-family: Rubik Glitch;
+    font-size: 70px;
+    font-weight: bolder;
+}
+h2{
+    text-align: center;
+    font-family: 微軟正黑體;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    margin: 1%;
 }
