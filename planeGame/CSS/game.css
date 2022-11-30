@@ -1,0 +1,156 @@
+body{
+    background-color: rgba(110, 129, 157, 0.929);
+    overflow: hidden;
+    /* background-image: url('../img/universe2.jpg'); */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#other{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+    /* text-align: center; */
+}
+#bodyBackground{
+    width: 10000px;
+    height: 100000px;
+    background-color: rgba(255,255,255,0.);
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    z-index: 1;
+}
+.star{
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    z-index: 3;
+}
+.star:hover{
+    transform: scale(10, 10) rotate(180deg) !important;
+    transition: all 1s;
+}
+.bullet{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 250px;
+    z-index: 4;
+}
+.rock{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /* top: -10%; */
+    animation-name: RR;   
+    animation-duration: 12s;    
+    animation-delay: 0s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite;
+}
+#MainBackground{
+    background-color: rgb(24, 22, 47);
+    /* background-image: url(../img/universe3.jpg); */
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 10%;
+    /* left: 33%; */
+    top: 20%;
+    z-index: 2;
+    overflow: hidden;
+    border: 10px white double;
+    /* border-radius: 30%; */
+}
+#Score{
+    font-family: 'Russo One';
+    font-size: 50px;
+    width: 1000px;
+    position: absolute;
+    left: 42%;
+    top:10%;
+}
+#intro{
+    background-color: rgba(208, 223, 243, 0.949);
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    left: 55%;
+    top:11%;
+    z-index: 2;
+
+    border: 5px white double;
+    border-radius: 30%;
+    text-align: center;
+
+}
+#intro ul{
+    font-size: 20px;
+    text-align: left;
+    position: absolute;
+    left: 20%;
+}
+#intro li{
+    margin: 10px 0px 20px 0px;
+}
+#intro button{
+    font-size: 20px;
+
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: 43%;
+    top: 70%;
+}
+#GameOver{
+    width: auto;
+    position: absolute;
+    z-index: 7;
+}
+
+#start{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    opacity: 0;
+}
+#again{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    opacity: 0;
+}
+#plane{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 250px;
+    top : 430px;
+    z-index: 5;
+}
+@keyframes RR{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+@keyframes flash {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

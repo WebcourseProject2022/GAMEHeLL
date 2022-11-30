@@ -7,7 +7,7 @@ cy = ch / 2;
 
 let requestId = null;
 
-const colors = ["#93DFB8", "#FFC8BA", "#E3AAD6", "#B5D8EB", "#FFBDD8"];
+const colors = ["#9ac785", "#FFC8BA", "#E3AAD6", "#9bb9e8", "#FFBDD8", "#dbd093", "#B5D8EB"];
 
 class Particle {
   constructor() {
@@ -49,7 +49,7 @@ class Particle {
 
 
 let particles = [];
-for (let i = 0; i < 30; i++) {
+for (let i = 0; i < 40; i++) {
   let p = new Particle();
   particles.push(p);
 }

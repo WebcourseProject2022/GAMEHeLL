@@ -1,0 +1,38 @@
+body{
+    background-color: azure;
+}
+h1{
+    position: absolute;
+    left: 44%;
+    top:-5%;
+    font-size: 80px;
+}
+.ScoreList{
+    width: 700px;
+    position: absolute;
+    left: 27%;
+    top: 20%;
+    font-size: 30px;
+    padding: 1px;
+    border-collapse: separate;
+    border-spacing: 5px;
+    border-radius: 10%;
+}
+.c1{
+    width: 25%;
+    text-align: center;
+}
+.c2{
+    text-align: right;
+}
+tr{
+    border-bottom: 1px solid #e4fac4;
+}
+tr:nth-of-type(even) td{
+    background-color:#d8efff;
+}
+td{
+    padding: 20px;
+    background-color: rgb(211, 225, 253);
+    height: 50px;
+}
