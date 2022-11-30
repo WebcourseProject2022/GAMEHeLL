@@ -1,9 +1,9 @@
 body{
     background-color:  rgba(110, 129, 157, 0.929);
 }
-audio{
+/* audio{
     display: none;
-}
+} */
 canvas {
     position: absolute;
     z-index: -1;
