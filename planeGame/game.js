@@ -13,7 +13,7 @@ var MainW = 800;
 var tmpKey = 0;
 
 function SetGame(){
-    Score = 0;
+    // Score = 0;
     BulletNum = 0;
     RockW = {};
     RockX = {};
@@ -110,6 +110,7 @@ $(document).ready(function(){
         // console.log(Key);
     });
     $("#OK").click(function(){
+        $("#GameOver").hide();
         $("#MainBackground").animate({
             left: 23+'%',
             width:800+"px"
@@ -145,6 +146,9 @@ $(document).ready(function(){
     })
     // ShowScore();
     $("#Yes").click(function(){
+        $("#score").val(Score);
+        console.log($("#score").val());
+        $("#Scoreform").submit();
         
     })
     $("#No").click(function(){
