@@ -1,6 +1,14 @@
-/* body{
-    background-color: azure;
-} */
+body{
+    background-color:  rgba(110, 129, 157, 0.929);
+}
+audio{
+    display: none;
+}
+canvas {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
 .card-img-top{
     width: 300px;
     height: 200px;
