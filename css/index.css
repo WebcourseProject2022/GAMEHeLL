@@ -1,10 +1,27 @@
 body{
-    background-color:  rgba(110, 129, 157, 0.929);
+    background-color:  rgba(96, 121, 160, 0.929);
 }
 audio{
     display: none;
 }
-canvas {
+
+.colorpicker{
+    color:
+    #93DFB8
+    #FFC8BA
+    #E3AAD6
+    #B5D8EB
+    #FFBDD8
+    
+    #7fa3b8
+    #9bb9e8
+    #9ac785
+    #f3f5b8
+    #dbd093
+   ;
+}
+
+canvas{
     position: absolute;
     z-index: -1;
     top: 0;
