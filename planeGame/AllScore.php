@@ -5,6 +5,7 @@
 ?>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/ALLScore.css">
         <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
     </head>

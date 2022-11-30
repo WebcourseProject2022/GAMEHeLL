@@ -1,3 +1,80 @@
 body{
-    background-color: azure;
+    /* background-color: azure; */
+    background-color: rgba(110, 129, 157, 0.929);
+    overflow: hidden;
+}
+#EnterName{
+    width: 500px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.963);
+    position: absolute;
+    left: 35%;
+    top:20%;
+    text-align: center;
+    border-radius: 30%;
+}
+#EnterName h1{
+    font-family: "Mali";
+    font-size: 40px;
+    position: absolute;
+    top:0%;
+    left: 15%;
+}
+#EnterName input{
+    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(70, 70, 70, 0.184); */
+    width: 350px;
+    height: 50px;
+    border: 0px ;
+    border-bottom:5px rgb(65, 65, 65) double;
+    /* border-radius: 10%; */
+    position: absolute;
+    top:55%;
+    left: 15%;
+    font-size: 20px;
+
+}
+#EnterName button{
+    width: 100px;
+    height: 50px;
+    background-color:  rgba(167, 197, 219, 0.901);
+    border: 5px rgb(65, 65, 65) double;
+    border-radius: 30%;
+    position: absolute;
+    left: 62%;
+    top: 75%;
+
+    font-family: "Mali";
+    font-weight: 300;
+    font-size: 20px;
+
+}
+#result{
+    width: 300px;
+    position: absolute;
+    top: 75%;
+    left: 8%;
+    text-align: center;
+}
+
+.star{
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    z-index: 3;
+}
+.star:hover{
+    transform: scale(10, 10) rotate(180deg) !important;
+    transition: all 1s;
+}
+@keyframes flash {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
