@@ -1,8 +1,12 @@
 body{
     background-color:  rgba(96, 121, 160, 0.929);
 }
-audio{
+/* audio{
     display: none;
+<<<<<<< HEAD
+} */
+canvas {
+=======
 }
 
 .colorpicker{
@@ -22,6 +26,7 @@ audio{
 }
 
 canvas{
+>>>>>>> 510d7d1021a449bf9bad7bbc47c1180f4131f938
     position: absolute;
     z-index: -1;
     top: 0;
@@ -59,6 +64,9 @@ canvas{
 
 }
 h1{
+    position: absolute;
+    top: 2%;
+    left: 30%;
     text-align: center;
     font-family: Rubik Glitch;
     font-size: 70px;
