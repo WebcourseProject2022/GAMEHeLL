@@ -50,6 +50,7 @@
                                 }
                             });
                             console.log(Score);
+                            NowScore = Score;
                         }
                         else if(NowScore < Score){
                             $.ajax({
@@ -67,7 +68,7 @@
                             });
                             NowScore = Score;
                         }
-                        $("#result").html(Name+"的分數是"+NowScore+",成績已上傳!");
+                        $("#result").html(Name+"的分數是"+"<?php echo $Score ?>"+",成績已上傳!");
                         setTimeout('location.href="AllScore.php"', 1000);
                         // console.log(NowScore == 'Error');
                     }
