@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+    <script>
+        var tmp = "https://cors-anywhere.herokuapp.com/";
+        var API = tmp+"https://script.google.com/macros/s/AKfycbxAweJC5d3vT9e1vt9A6jXLYuqyhJs9DNjSabJ-Or-aA7NjW1w8FgIEamNptAhjuZ5O/exec";
+        function login(){
+            var Name = $("#username").val();
+            var Message = $("#messageBox").val();
+            $("#username").val("");
+            $("#messageBox").val("");
+            $.ajax({
+                type: "post",
+                data: {
+                    "method": "write",
+                    "name": Name,
+                    "message": Message
+                },
+                url: API ,
+                success:function(res){
+                    console.log(Message);
+                    $("#result").html(Name+"說"+Message);
+                },
+                error:function(res){
+                    console.log(res);
+                }
+            });
+        }
+    </script>
+
+    </head>
+    <body>
+        <h1>輸入你的暱稱</h1>
+        <input id="username">
+        <h1>想對我們說什麼?</h1>
+        <textarea id="messageBox"></textarea>
+        <button onclick="login()">確認</button>
+        <div id="result"></div>
+    </body>
+</html>
