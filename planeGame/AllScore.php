@@ -8,9 +8,11 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/ALLScore.css">
         <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+        
     </head>
     <body>
             <h1>Score</h1>
+            <canvas id="canvas"></canvas>
 
             <?php
                 echo "<table class='ScoreList'>";
@@ -23,5 +25,6 @@
             ?>
 
             <button>返回遊戲</button>
+            <script src="js/ALLScore.js"></script>
     </body>
 </html>

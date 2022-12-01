@@ -1,5 +1,6 @@
 body{
-    background-color: azure;
+    /* background-color: azure; */
+    background-color: rgba(110, 129, 157, 0.92);
 }
 h1{
     position: absolute;
