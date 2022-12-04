@@ -87,3 +87,8 @@ setTimeout(function () {
   Init();
   window.addEventListener('resize', Init, false);
 }, 15);
+
+
+$(document).ready(function(){
+  
+})
