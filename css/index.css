@@ -39,7 +39,7 @@ canvas {
     border-radius: 30px;
 }
 .c5{
-
+    border-radius: 30px;
 }
 h1{
     position: absolute;
@@ -49,6 +49,7 @@ h1{
     font-family: Rubik Glitch;
     font-size: 70px;
     font-weight: bolder;
+    color: rgb(46, 4, 50);
 }
 h2{
     text-align: center;
