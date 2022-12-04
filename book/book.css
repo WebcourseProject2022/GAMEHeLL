@@ -4,6 +4,7 @@
 }
 body{
     background-image: url('library1.jpg');
+    opacity: 0.5;
 }
 h1{
     font-size: 100px;
