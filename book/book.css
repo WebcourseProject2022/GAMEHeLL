@@ -2,6 +2,10 @@
     text-align: center;
     font-family: "LiSu", FZShuTi;
 }
+body{
+    background-image: url('library1.jpg');
+    opacity: 20%;
+}
 h1{
     font-size: 100px;
     font-weight: bolder;
@@ -9,6 +13,7 @@ h1{
     left: 35%;
     top: -10%;
     z-index: 10;
+    color: white;
 }
 #sendMessage{
     position: absolute;
@@ -44,6 +49,7 @@ button:hover {
 #output{
     width: 100%;
     text-align: center;
+    color: white;
 }   
 h2{
     text-align: center;
@@ -57,5 +63,5 @@ h3{
     font-family: "FZYaoTi";
     font-size: 1.5em;
     font-weight: bolder;
-    
+    color: white;
 }

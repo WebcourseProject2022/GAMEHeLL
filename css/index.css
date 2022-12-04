@@ -27,19 +27,19 @@ canvas {
     display: inline-table;
 }
 .c1{
-    
+    border-radius: 30px;
 }
 .c2{
-
+    border-radius: 30px;
 }
 .c3{
-
+    border-radius: 30px;
 }
 .c4{
     border-radius: 30px;
 }
 .c5{
-
+    border-radius: 30px;
 }
 h1{
     position: absolute;
@@ -49,6 +49,7 @@ h1{
     font-family: Rubik Glitch;
     font-size: 70px;
     font-weight: bolder;
+    color: rgb(46, 4, 50);
 }
 h2{
     text-align: center;
