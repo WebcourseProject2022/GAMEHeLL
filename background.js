@@ -90,5 +90,16 @@ setTimeout(function () {
 
 
 $(document).ready(function(){
-  
+  $("#Title").click(function(){
+    Musicplay();
+  })
+  // setTimeout("Musicplay()", 1000);
 })
+function Musicplay(){
+  if($("#music")[0].paused){
+    $("#music")[0].play();
+  }
+  else{
+    $("#music")[0].pause();
+  }
+}
