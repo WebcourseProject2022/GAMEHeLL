@@ -2,13 +2,45 @@ body{
     /* background-color: azure; */
     background-color: rgba(110, 129, 157, 0.92);
 }
-h1{
+#Title{
+    text-shadow:
+       5px 5px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: #ffffff;
     position: absolute;
-    left: 44%;
-    top:-5%;
-    font-size: 80px;
+    left: 33%;
+    top:-10%;
+    font-size: 100px;
+    z-index: 7;
+    font-family: 'Secular One';
 }
+/* .tmp{
+ color : #FFFFFF #ffeec2 #94baf7 
+ #cddefa", "#dfe8f7", "#99b3e0", "#f7f19c", "#ffeec2"
+ #FFFFFF;
+} */
 .ScoreList{
+    background-color: #ffffff;
+    width: 600px;
+    position: absolute;
+    left: 26%;
+    top: 15%;
+    font-size: 30px;
+    padding: 20px 50px 50px 80px;
+    list-style-position: outside;
+    font-size: 35px;
+    border-radius: 10%;
+    border: 15px double black;
+}
+.ScoreList li{
+    border-bottom:1px #000000 solid;
+    font-family: 'Zen Dots';
+}
+/* .ScoreList{
     width: 700px;
     position: absolute;
     left: 27%;
@@ -18,22 +50,49 @@ h1{
     border-collapse: separate;
     border-spacing: 5px;
     border-radius: 10%;
+} */
+.t1{
+    position: absolute;
+    left: 8%;
+    display: inline-block;
+    width: 25%;
+    text-align: left;
+    font-size: 40px;
+    margin: 20px 0px 10px 0px;
+    font-family: 'Zen Dots';
+}
+.t2{
+    width: 95%;
+    display:inline-block;
+    text-align: right;
+    font-size: 40px;
+    margin: 20px 0px 10px 10px;
+    /* margin: 10px; */
+    font-family: 'Zen Dots';
 }
 .c1{
+    display: inline-block;
     width: 25%;
-    text-align: center;
+    text-align: left;
+    margin: 20px 0px 20px 0px;
+    
 }
 .c2{
+    width: 69%;
+    display:inline-block;
     text-align: right;
+    margin: 20px 0px 20px 0px;
+    font-family: 'Zen Dots';
+    /* margin: 10px; */
 }
 tr{
     border-bottom: 1px solid #e4fac4;
 }
-tr:nth-of-type(even) td{
-    background-color:#d8efff;
+/* li:nth-of-type(even){
+    background-color:#cfffe1;
 }
-td{
+li{
     padding: 20px;
-    background-color: rgb(211, 225, 253);
+    background-color: rgb(150, 203, 210);
     height: 50px;
-}
+} */

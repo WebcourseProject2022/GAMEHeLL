@@ -1,66 +1,11 @@
-// var MainW = 2000;
-// var downStarId = 0;
-// function setStar(){
-//     for(var i = 0; i < 800; i++){
-//         var starx = Math.floor(Math.random()*MainW);
-//         var stary = Math.floor(Math.random()*MainW);
-//         var scale = Math.random() * 5+1;
-//         var flashtime = Math.random() * 5+2;
-//         var dtime = Math.random() * 10;
-//         var star = "<img class='star s"+i+"' src='img/star.png'>"  
-//         $("body").append(star);
-//         $(".s"+i).css({
-//             'opacity': Math.random(),
-//             'left':starx+'px',
-//             'top':stary+'px',
-//             'transform': 'scale('+ scale + ', ' + scale + ')',
-//             'animation-name': 'flash',
-//             'animation-duration': flashtime+'s',
-//             'animation-delay': dtime+'s',
-//             'animation-iteration-count': 'infinite',
-//             'animation-timing-function': 'linear', 
-//             'animation-direction': 'reverse',
-//             'z-index':'-1'
-//         })
-//         // $(".s"+i).addClass("starflash");
-//     }
-// }
-// function downstar(){
-//     // downStarId= downStarId%30;
-//     for(var i = 0; i < 25; i++){
-//         var starx = Math.floor(Math.random()*MainW);
-//         var stary = Math.floor(Math.random()*MainW);
-//         var scale = Math.random() * 5+5;
-//         var flashtime = Math.random() * 5+2;
-//         var dtime = Math.random() * 5000+500;
-//         $(".s"+i).css({
-//             'opacity': Math.random(),
-//             'left':starx+'px',
-//             'top':-1*stary+'px',
-//             'transform': 'scale('+ scale + ', ' + scale + ')',
-//             'animation-name': 'flash',
-//             'animation-duration': flashtime+'s',
-//             'animation-delay': dtime+'s',
-//             'animation-iteration-count': 'infinite',
-//             'animation-timing-function': 'linear', 
-//             'animation-direction': 'reverse'
-//         })
-//         $(".s"+i).delay(dtime).animate({top:"150%", left:"-=30%"},6000)
-//         // $(".s"+i).addClass("starflash");
-//     }
-// }
-// // function RemoveDstar(){
-// //     for(var i = 0; i < 10; i++){
-        
-// //     }
-// // }
 
-// $(document).ready(function(){
-//     setStar();
-//     downstar();
-//     setInterval("downstar()",2000);
+
+$(document).ready(function(){
+    ("#goback").click(function(){
+      
+    })
     
-// })
+})
 
 
 const canvas = document.getElementById("canvas");
@@ -72,19 +17,20 @@ cy = ch / 2;
 
 let requestId = null;
 
-const colors = ["#9ac785", "#FFC8BA", "#E3AAD6", "#9bb9e8", "#FFBDD8", "#dbd093", "#B5D8EB"];
-
+// const colors = ["#9ac785", "#FFC8BA", "#E3AAD6", "#9bb9e8", "#FFBDD8", "#dbd093", "#B5D8EB"];
+const colors = ["#FFFFFF","#ffeec2", "#94baf7","#cddefa", "#dfe8f7", "#f7f19c", "#ffeec2", "#FFFFFF"];
 class Particle {
   constructor() {
     this.x = Math.random() * cw;
     this.y = Math.random() * ch;
     this.r = 15 + ~~(Math.random() * 20); //radius of the circumcircle
-    this.l = 4 + ~~(Math.random() * 2); //polygon sides
+    this.l = 5 + ~~(Math.random() * 1); //polygon sides
     this.a = 2 * Math.PI / this.l; // angle between polygon vertices
     this.rot = Math.random() * Math.PI; // polygon rotation
     this.speed = 0.6 + Math.random() / 2;
     this.rotSpeed = 0.008 + Math.random() * .005;
     this.color = colors[~~(Math.random() * colors.length)];
+    this.R = 20+Math.random()*35;
   }
   update() {
     if (this.y < -this.r) {
@@ -99,9 +45,15 @@ class Particle {
     ctx.rotate(this.rot);
     ctx.beginPath();
     for (let i = 0; i < this.l; i++) {
-      let x = this.r * Math.cos(this.a * i);
-      let y = this.r * Math.sin(this.a * i);
-      ctx.lineTo(x, y);
+      
+      var r =this.R/2;
+      // let x = this.r * Math.cos(this.a * i);
+      // let y = this.r * Math.sin(this.a * i);
+      let x = 0;
+      let y = 0;
+      ctx.lineTo(Math.cos((18 + 72 * i) / 180 * Math.PI) * this.R + x, -Math.sin((18 + 72 * i) / 180 * Math.PI) * this.R + y);
+      ctx.lineTo(Math.cos((54 + 72 * i) / 180 * Math.PI) * r + x, -Math.sin((54 + 72 * i) / 180 * Math.PI) * r + y);
+      // ctx.lineTo(x, y);
     }
     ctx.closePath();
     ctx.lineWidth = 4;
@@ -152,3 +104,6 @@ setTimeout(function () {
   Init();
   window.addEventListener('resize', Init, false);
 }, 15);
+
+
+
