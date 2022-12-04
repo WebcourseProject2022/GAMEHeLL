@@ -304,19 +304,19 @@ function checkRock(i){
 }
 function ShowScore(){
     if(Retry == 0){
-        $("#Score").html("Your Score : "+Score);
-        // $("#Score").css({
-        //     'font-size':40+'px',
-        //     'top':33+"%",
-        //     'left':40+"%"
-        // })
+        $("#Score").html("Your Score is "+Score+", Try Again?");
+        $("#Score").css({
+            'font-size':50+'px',
+            'top':15+"%",
+            'left':40+"%"
+        })
     }
     else{
         $("#Score").text("Your Score : "+Score);
         $("#Score").css({
-            'font-size':50+'px',
-            'top':10+"%",
-            'left':42+"%"
+            'font-size':60+'px',
+            'top':-5+"%",
+            'left':40+"%"
         })
     }
 }
