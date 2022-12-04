@@ -93,9 +93,9 @@ $(document).ready(function(){
   $("#Title").click(function(){
     Musicplay();
   })
-  // setTimeout("Musicplay()", 1000);
 })
 function Musicplay(){
+  $("#music").muted = true;
   if($("#music")[0].paused){
     $("#music")[0].play();
   }
