@@ -11,9 +11,9 @@ var Key = 0;
 var Retry = 1;
 var MainW = 800;
 var tmpKey = 0;
+var btnkey = 1;
 
 function SetGame(){
-    // Score = 0;
     BulletNum = 0;
     RockW = {};
     RockX = {};
@@ -77,34 +77,36 @@ $(document).ready(function(){
     SetGame();
     setStar();
     $("#start").click(function(){
-        if(Retry == 1){
-            Key = (Key+1)%2;
-            if(Key){
-                // $("#start").text("Pause");
-                $("#start").attr('title', "Pause");
-                $("#start").attr('src', "img/pause4.png");
+        if(btnkey){
+            if(Retry == 1){
+                Key = (Key+1)%2;
+                if(Key){
+                    // $("#start").text("Pause");
+                    $("#start").attr('title', "Pause");
+                    $("#start").attr('src', "img/pause4.png");
+                }
+                else{
+                    // $("#start").text("Start");
+                    $("#start").attr('title', "Start");
+                    $("#start").attr('src', "img/play2.png");
+                }
             }
             else{
-                // $("#start").text("Start");
-                $("#start").attr('title', "Start");
-                $("#start").attr('src', "img/play2.png");
-            }
-        }
-        else{
-            tmpKey++;
-            if(tmpKey%2 == 0){
-                // $("#start").text("Pause");
-                $("#start").attr('title', "Pause");
-                $("#start").attr('src', "img/pause4.png");
-            }
-            else{
-                // $("#start").text("Start");
-                $("#start").attr('title', "Start");
-                $("#start").attr('src', "img/play2.png");
-            }
-            if(tmpKey > 10){
-                alert('Please click "Restart"');
-                tmpKey = 1;
+                tmpKey++;
+                if(tmpKey%2 == 0){
+                    // $("#start").text("Pause");
+                    $("#start").attr('title', "Pause");
+                    $("#start").attr('src', "img/pause4.png");
+                }
+                else{
+                    // $("#start").text("Start");
+                    $("#start").attr('title', "Start");
+                    $("#start").attr('src', "img/play2.png");
+                }
+                if(tmpKey > 10){
+                    alert('Please click "Restart"');
+                    tmpKey = 1;
+                }
             }
         }
         // console.log(Key);
@@ -135,25 +137,30 @@ $(document).ready(function(){
     })
 
     $("#again").click(function(){
-        Score = 0;
-        Retry = 1;
-        Key = 1
-        // $("#start").text("Pause");
-        $("#start").attr('title', "Pause");
-        $("#start").attr('src', "img/pause4.png");
-        ShowScore();
-        SetGame();
+        if(btnkey){
+            Score = 0;
+            Retry = 1;
+            Key = 1
+            // $("#start").text("Pause");
+            $("#start").attr('title', "Pause");
+            $("#start").attr('src', "img/pause4.png");
+            ShowScore();
+            SetGame();
+        }
     })
     // ShowScore();
     $("#Yes").click(function(){
         $("#score").val(Score);
         console.log($("#score").val());
         $("#Scoreform").submit();
+        btnkey = 1;
         
     })
     $("#No").click(function(){
         $("#GameOver").hide();
+        $("#Score").text("Try Again?");
         console.log(1);
+        btnkey = 1;
     })
     setInterval("MoveRock()",20);
     setInterval("MoveBullet()",1);
@@ -284,6 +291,7 @@ function MoveRock(){
                 if(RockY[i-1]+RockW[i-1] > tmpTop+10 && RockY[i-1]+RockW[i-1] < tmpTop+80 ){
                     //alert("Game Over");
                     $("#GameOver").show();
+                    btnkey = 0;
                     // SetRock(i+1);
                     Retry = 0;
                     ShowScore();
@@ -304,19 +312,9 @@ function checkRock(i){
 }
 function ShowScore(){
     if(Retry == 0){
-        $("#Score").html("Your Score is "+Score+", Try Again?");
-        $("#Score").css({
-            'font-size':50+'px',
-            'top':15+"%",
-            'left':40+"%"
-        })
+        $("#Score").html("Your Score is "+Score);
     }
     else{
         $("#Score").text("Your Score : "+Score);
-        $("#Score").css({
-            'font-size':60+'px',
-            'top':-5+"%",
-            'left':40+"%"
-        })
     }
 }

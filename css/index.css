@@ -2,18 +2,24 @@ body{
     background-color:  rgba(96, 121, 160, 0.929);
 }
 #Title{
+    position: absolute;
+    top: -5%;
+    left: 25%;
+    text-align: center;
+    font-family: "Alfa Slab One";
+    font-size: 80px;
+    color: rgb(241, 241, 241);
+    z-index: 8;
     text-shadow:
        5px 5px 0 #000,
      -1px -1px 0 #000,  
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-    color: #ffffff;
-    position: absolute;
+    -webkit-text-stroke: 3px rgb(79 90 108);
 }
 audio{
-    /* display: none; */
+    display: none;
     width:110px;
     position: absolute;
     left: 10%;
@@ -44,6 +50,11 @@ canvas {
     /* position: absolute; */
     display: inline-table;
 }
+.tmp{
+    width: 200px;
+    height: 100px;
+    display: inline-table;
+}
 .c1{
     border-radius: 30px;
 }
@@ -59,19 +70,19 @@ canvas {
 .c5{
     border-radius: 30px;
 }
-h1{
+/* h1{
     position: absolute;
     top: -2%;
     left: 30%;
     text-align: center;
-    /* font-family: Rubik Glitch; */
-    font-family: "Zen Dots";
-    font-size: 70px;
+    font-family: Rubik Glitch;
+    font-family: "Ubuntu Mono";
+    font-size: 80px;
     font-weight: bolder;
-    /* color: rgb(29, 4, 50); */
+    color: rgb(29, 4, 50);
     color: rgb(39, 43, 73);
     z-index: 8;
-}
+} */
 h2{
     text-align: center;
     font-family: 微軟正黑體;

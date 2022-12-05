@@ -143,13 +143,23 @@ body{
     z-index: 8;
     text-align: center;
     padding:10px 50px 10px 50px;
-    border-radius:10%
+    border-radius:10%;
+    font-family: 'Ubuntu Mono';
+    border: 15px  rgb(125 127 134) double;
 }
-/* #GameOver{
-    width: auto;
-    position: absolute;
-    z-index: 7;
-} */
+#GameOver #Title{
+    font-size: 40px;
+    margin: 20px 0px 5px 0px;
+}
+#GameOver button{
+    width: 60px;
+    height: 35px;
+    font-size: 25px;
+    font-family: 'Ubuntu Mono';
+    margin: 5px 20px 10px 20px;
+    border-radius: 10%;
+    background-color: #c6cee3;
+}
 
 #start{
     width: 80px;
