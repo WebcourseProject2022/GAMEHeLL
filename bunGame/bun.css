@@ -2,14 +2,19 @@
   box-sizing: border-box;
 }
 
-.all {
-  width: 500px;
-  padding: 20px;
-  margin: 0px auto;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.all{
+    width: 500px;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bt{
+	
+    display: flex;
+    align-items: center;
 }
 
 .bt {
