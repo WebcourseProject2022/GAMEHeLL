@@ -1,6 +1,8 @@
 body{
     /* background-color: azure; */
     background-color: rgba(110, 129, 157, 0.92);
+    height: 150%;
+    /* overflow: hidden; */
 }
 #Title{
     text-shadow:
@@ -13,8 +15,8 @@ body{
     color: #ffffff;
     position: absolute;
     left: 33%;
-    top:-10%;
-    font-size: 100px;
+    top:-5%;
+    font-size: 90px;
     z-index: 7;
     font-family: 'Secular One';
 }
@@ -23,18 +25,20 @@ body{
  #cddefa", "#dfe8f7", "#99b3e0", "#f7f19c", "#ffeec2"
  #FFFFFF;
 } */
-.ScoreList{
+.ScoreList{ 
     background-color: #ffffff;
-    width: 600px;
+    width: 500px;
+    /* height: 460px; */
     position: absolute;
-    left: 26%;
-    top: 15%;
+    left: 27%;
+    top: 18%;
     font-size: 30px;
     padding: 20px 50px 50px 80px;
     list-style-position: outside;
-    font-size: 35px;
+    font-size: 30px;
     border-radius: 10%;
     border: 15px double black;
+    /* overflow: hidden; */
 }
 .ScoreList li{
     border-bottom:1px #000000 solid;
@@ -57,7 +61,7 @@ body{
     display: inline-block;
     width: 25%;
     text-align: left;
-    font-size: 40px;
+    font-size: 30px;
     margin: 20px 0px 10px 0px;
     font-family: 'Zen Dots';
 }
@@ -65,7 +69,7 @@ body{
     width: 95%;
     display:inline-block;
     text-align: right;
-    font-size: 40px;
+    font-size: 30px;
     margin: 20px 0px 10px 10px;
     /* margin: 10px; */
     font-family: 'Zen Dots';
@@ -87,6 +91,15 @@ body{
 }
 tr{
     border-bottom: 1px solid #e4fac4;
+}
+#goback{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 70%;
+    position: absolute;
+    left: 26.5%;
+    top: 8%;
 }
 /* li:nth-of-type(even){
     background-color:#cfffe1;

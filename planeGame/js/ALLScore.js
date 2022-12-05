@@ -1,8 +1,9 @@
 
 
 $(document).ready(function(){
-    ("#goback").click(function(){
-      
+    $("#goback").click(function(){
+      // console.log(1);
+      location.href="game.html";
     })
     
 })
@@ -10,10 +11,12 @@ $(document).ready(function(){
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-let cw = canvas.width = window.innerWidth,
-cx = cw / 2;
-let ch = canvas.height = window.innerHeight,
+let cw = canvas.width = (window.innerWidth),
+cx = cw / 2 ;
+// cx = cw;
+let ch = canvas.height = (window.innerHeight+400),
 cy = ch / 2;
+// cy = ch
 
 let requestId = null;
 
@@ -66,7 +69,7 @@ class Particle {
 
 
 let particles = [];
-for (let i = 0; i < 40; i++) {
+for (let i = 0; i < 50; i++) {
   let p = new Particle();
   particles.push(p);
 }
@@ -94,7 +97,7 @@ function Init() {
 
 
   cw = canvas.width = window.innerWidth, cx = cw / 2;
-  ch = canvas.height = window.innerHeight, cy = ch / 2;
+  ch = canvas.height = window.innerHeight+400, cy = ch / 2;
 
   //particles.map((p) => p.update());
   Draw();

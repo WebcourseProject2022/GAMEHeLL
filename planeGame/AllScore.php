@@ -15,13 +15,14 @@
     </head>
     <body>
             <h1 id="Title">Scoreboard</h1>
+            <img id="goback" src="img/back1.png" title="back to game">
             <canvas id="canvas"></canvas>
-            <button id="goback">返回遊戲</button>
             <?php
                 echo "<ol class='ScoreList'>";
                 echo "<span class='t1'>Name</span><span class='t2'>Score</span>";
                 // echo "< class='ALLPlayer'></thead>";
-                for($j = 1; $j < count($myarray["values"] ); $j++){
+                for($j = 1; $j < count($myarray["values"] ) && $j <= 10; $j++){
+                    
             ?>
                     <?php echo "<li><span class='c1'>".$myarray["values"][$j][1]."</span><span class='c2'>".$myarray["values"][$j][2]."</span></li>"?>
             <?php
