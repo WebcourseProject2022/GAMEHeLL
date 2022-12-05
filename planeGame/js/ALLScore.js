@@ -3,7 +3,7 @@
 $(document).ready(function(){
     $("#goback").click(function(){
       // console.log(1);
-      location.href="game.html";
+      location.href="index.html";
     })
     
 })
