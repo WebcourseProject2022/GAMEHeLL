@@ -160,6 +160,14 @@ body{
     border-radius: 10%;
     background-color: #c6cee3;
 }
+#goback{
+    position: absolute;
+    
+}
+#goback img{
+    width: 100px;
+    height: 100px;
+}
 
 #start{
     width: 80px;
