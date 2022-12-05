@@ -162,13 +162,18 @@ body{
 }
 #goback{
     position: absolute;
-    background-color: #c6cee3;
-    width: 100px;
-    height: 100px;
+    /* background-color: #c6cee3; */
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    left: 10%;
+    top: 10%;
 }
 #goback img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    /* border: 5px #000 double; */
+    /* transform: scale(1); */
 }
 
 #start{
