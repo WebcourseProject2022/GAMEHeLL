@@ -11,7 +11,7 @@ h1{
     font-weight: bolder;
     position: absolute;
     left: 35%;
-    /* top: -10%; */
+    top: -5%;
     z-index: 10;
     color: white;
     font-family: "LiSu", FZShuTi;
