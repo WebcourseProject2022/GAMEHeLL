@@ -93,6 +93,7 @@ $(document).ready(function(){
   $("#Title").click(function(){
     Musicplay();
   })
+  Musicplay();
 })
 function Musicplay(){
   $("#music").muted = true;
