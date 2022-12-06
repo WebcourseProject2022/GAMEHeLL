@@ -17,6 +17,9 @@ h1{
     font-family: "LiSu", FZShuTi;
 
 }
+#gohome{
+    background-color: rgba(0, 0, 0, 0);
+}
 #sendMessage{
     position: absolute;
     left: 26.5%;
